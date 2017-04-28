@@ -1,4 +1,6 @@
 FROM alpine:latest
 MAINTAINER Max
 
-RUN apk --nocache add lftp openssh
+RUN apk update && \
+    apk add lftp openssh && \
+    apk cache clean
